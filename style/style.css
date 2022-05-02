@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+/* Press Start 2P */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Press+Start+2P&display=swap');
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Nunito:wght@200;300;400;600;700&family=Press+Start+2P&display=swap');
+/* Amatic SC */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+width: 100%;
+background-color: rgb(255, 255, 255);
+font-family: 'Nunito', sans-serif;
+height: 100%; 
+display: flex;
+justify-content: center;
+}
+
+.wrapper {  
+    min-height: 100vh;
+    display: block; 
+}
+.main__wrapper {
+     width: 720px;
+     margin: 0 auto;
+    
+}
+
+.title__header {
+    text-align: center;
+}
+.title__header h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 20px;
+    padding: 10px 5px;
+}
+.title__header h3{
+   padding: 5px;
+}
+.title__header h4{
+    color: #3b70d4;
+}
+
+.action__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.input__action-block { 
+    background-color: #f2fbff;
+    padding: 0px 30px;
+    height: 80px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    box-shadow: 0px 4px 10px 1px rgba(227, 227, 227, 0.635);
+    font-size: 30px;
+    font-family: 'Amatic SC', sans-serif;
+}
+.action_copy-btn {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+    fill: rgb(104, 106, 105);
+    
+}
+.action__refresh-btn {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    cursor: pointer;
+    fill: rgb(104, 106, 105);
+}
+.app__wrapper {
+    box-shadow: 0px 0px 10px 1px rgba(228, 228, 228, 0.635);
+    background-color: #f2fbff;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    padding: 32px;
+    margin-top: 25px;
+}
+
+.settings__block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title__settings-block {
+    display: flex;
+    font-size: 30px;
+    font-weight: 700;
+    color:rgb(72, 72, 72);
+    margin-bottom: 5px;
+}
+.information__settings {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.input__range-settings {
+    position: relative;
+}
+.length__settings {
+    padding: 30px 10px;
+}
+.length__settings span {
+    display: flex;
+    color:rgb(82, 80, 80);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+/* Стилизация инпутов(number и range) */
+.number__input {
+    color:rgb(105, 104, 104);
+    text-align: center;
+    width: 70px;
+    height: 50px;
+    font-size: 23px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(155, 155, 155, 0.635);
+    margin-right: 15px;
+}
+#range {
+    -webkit-appearance: none;
+    outline: none;
+    background: #67bce0;
+    border-radius: 10px;
+    height: 8px;
+    width: 200px;
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 1px rgb(236, 236, 236);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    background: #67bce0;
+    
+}
+.fill {
+    position: absolute;
+    left: 90px; top: 25px;
+    background-color: #0dd;
+    width: 200px; height: 8px;
+    border-radius: 50px;
+    
+}
+
+#range::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 5px rgba(78, 205, 255, 0.1); 
+}
+#range:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 10px rgba(78, 205, 255, .2); 
+}
+
+ 
+
+.bonus__settings {
+    padding: 30px 20px;
+}
+.bonus__settings a {
+    display: flex;
+    color: rgb(82, 80, 80);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.list__settings {
+    text-align: left;
+}
+.list__settings li{
+    padding: 3px;
+    font-size: 20px;
+}
+.checkbox {
+    margin-right: 5px;
+}
+.copy__btn {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border: 0px solid #fff;
+}
+.copy__btn button{
+    padding: 10px 40px;
+    border: 0px solid #fff;
+    border-radius: 30px;
+    font-size: 24px;
+    background-color: rgb(103, 188, 224);
+    color:rgb(244, 248, 249);
+}
+
+.fullscreen {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(240, 249, 255);
+    display: flex;
+}
+.about__block {
+    background-color: rgb(240, 249, 255);
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column ;
+    padding: 0 30px;
+}   
+.about__title {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 30px 0px;
+}
+.about__article {
+    font-size: 20 px;
+    font-weight: 500;
+}
+.about__article ul li {
+    margin-top: 15px;
+}

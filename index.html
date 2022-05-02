@@ -4,60 +4,121 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.scss" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Генератор паролей</title>
   </head>
   <body>
+      <div class="wrapper">
       <div class="main__wrapper">
-          <div class="header">
-              <div class="title__action-block">
-                  <img src="./assets/main__logo.png" alt="logo" height="150px">
-                  <h1>
-                      Создание безопасного пароля
-                    </h1>
+
+              
+                  <div class="title__header">
+                      <img src="./assets/main_lg.png" alt="logo" height="120px">
+                      <h1>
+                          Создание безопасного пароля
+                        </h1>
                     <h3>
-                        
                         Используйте генератор паролей, чтобы мгновенно создать безопасный, случайный пароль.
                     </h3>
+                    
                 </div>
+           
+            
+            <div class="action__block">
+                <input class="input__action-block" type="text"></input>
+                
+                <a href="" class="action_copy-btn">
+                    <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M32 2H8C5.79 2 4 3.79 4 6v28h4V6h24V2zm6 8H16c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4V14c0-2.21-1.79-4-4-4zm0 32H16V14h22v28z"/></svg>
+                </a>
+                <a class="action__refresh-btn">
+                    <svg width="40" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z"/></g></svg>
+                </a>
             </div>
             
             <div class="app__wrapper">
-                <div class="action__block">
-                    <h4>ГЕНЕРАТОР ПАРОЛЯ</h4>
-                    <input class="input__action-block"></input>
-                    <button class="action__action-btn">СОЗДАТЬ</button>
-                </div>
                 <div class="settings__block">
-                    <span class="title__settings-block">Настройка пароля</span>
+                    <span class="title__settings-block">Кастомизация пароля</span>
+                    <hr noshade size="5" color="#67bce0"/>
                     <div class="information__settings">
-                        <div class="length__settings"></div>
-                        <span>Включать в пароль:</span>
+                        <div class="length__settings">
+                            <span>Длина пароля</span>
+                            <div class="input__range-settings">
+                                
+                                <input id="number" class="number__input" type="number" step="1" value="8" maxlength="2" max="48" min="4" size="3" oninput="range.value=number.value">
+                                
+                                <input id="range" name="number" class="range__input" type="range" value="8" min="4" max="48" oninput="number.value=range.value">
+                            </div>
+                            
+                        </div>
                         <div class="bonus__settings">
+                            <a>Включать в пароль:</a>
                             <ul class="list__settings">
-                                <li>
-                                    <input type="checkbox" class="checkbox">
-                                    <span>Заглавные</span>
-                                </li>
                                 <li>
                                     <input type="checkbox" class="checkbox">
                                     <span>Числа</span>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="checkbox">
-                                    <span>Спецсимволы</span>
+                                    <span>Символы</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checkbox">
+                                    <span>Строчные</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checkbox">
+                                    <span>Заглавные</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about__block">
-                <div class="about__title"></div>
-                <div class="about__article"></div>
-            </div>
         </div>
-            <script src="./index.js"></script>
+            <div class="copy__btn">
+                <button>Копировать</button>
+            </div>
+            <section class="fullscreen">
+                <div class="about__block">
+                    <span class="about__title">
+                        Лучшие советы по паролю
+                    </span>
+                    <div class="about__article">
+                        <ul>
+
+                            <li>
+                                1. Всегда используйте уникальный пароль для каждой создаваемой вами учетной записи. Опасность повторного использования паролей заключается в том, что как только на одном сайте возникает проблема с безопасностью, хакерам очень легко использовать ту же комбинацию имени пользователя и пароля на других сайтах.
+                            </li>
+                            <li>
+                                
+                                2. Не используйте какую-либо личную информацию в своих паролях. Имена, дни рождения и адреса улиц может быть легко запомнить, но их также легко найти в Интернете, и их всегда следует избегать в паролях, чтобы обеспечить максимальную надежность.
+                            </li>
+                            <li>
+                                
+                                3. Убедитесь, что ваши пароли имеют длину не менее 12 символов и содержат буквы, цифры и специальные символы. Некоторые люди предпочитают генерировать пароли длиной 14 или 20 символов.
+                            </li>
+                            <li>
+                                
+                                4. Избегайте слабых, часто используемых паролей, таких как asd123, password1 или Temp!. Некоторые примеры надежного пароля включают в себя: S&2x4S12nLS1*, JANa@sx3l2&s$, 49915w5$oYmH.
+                            </li>
+                            <li>
+                                
+                                5. Избегайте использования похожих паролей, которые меняют только одно слово или символ. Эта практика ослабляет безопасность вашей учетной записи на нескольких сайтах.
+                            </li>
+                            <li>
+                                
+                                6. Меняйте свои пароли, когда у вас есть на то основания, например, после того, как вы поделились ими с кем-то, после взлома веб-сайта или если прошло больше года с тех пор, как вы в последний раз меняли его.
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="./index.js">
+            
+        </script>
         </body>
         </html>
-
+        
+        
