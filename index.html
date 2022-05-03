@@ -11,7 +11,6 @@
       <div class="wrapper">
       <div class="main__wrapper">
 
-              
                   <div class="title__header">
                       <img src="./assets/main_lg.png" alt="logo" height="120px">
                       <h1>
@@ -20,13 +19,11 @@
                     <h3>
                         Используйте генератор паролей, чтобы мгновенно создать безопасный, случайный пароль.
                     </h3>
-                    
                 </div>
            
             
             <div class="action__block">
-                <input class="input__action-block" type="text"></input>
-                
+                <input id="" class="input__action-block" type="text"></input>
                 <a href="" class="action_copy-btn">
                     <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M32 2H8C5.79 2 4 3.79 4 6v28h4V6h24V2zm6 8H16c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4V14c0-2.21-1.79-4-4-4zm0 32H16V14h22v28z"/></svg>
                 </a>
@@ -43,33 +40,37 @@
                         <div class="length__settings">
                             <span>Длина пароля</span>
                             <div class="input__range-settings">
-                                
-                                <input id="number" class="number__input" type="number" step="1" value="8" maxlength="2" max="48" min="4" size="3" oninput="range.value=number.value">
-                                
+                                <input id="number" class="number__input" type="number" step="1" value="8" maxlength="2" max="48" min="4" size="3" oninput="range.value=number.value"> 
                                 <input id="range" name="number" class="range__input" type="range" value="8" min="4" max="48" oninput="number.value=range.value">
                             </div>
-                            
                         </div>
                         <div class="bonus__settings">
                             <a>Включать в пароль:</a>
-                            <ul class="list__settings">
-                                <li>
-                                    <input type="checkbox" class="checkbox">
-                                    <span>Числа</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checkbox">
-                                    <span>Символы</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checkbox">
-                                    <span>Строчные</span>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="checkbox">
-                                    <span>Заглавные</span>
-                                </li>
-                            </ul>
+                            <form action="">
+
+                                <ul class="list__settings">
+                                    <li> 
+                                        <input type="checkbox" class="checkbox" id="check_number"> <label for="check_number">
+                                            Числа
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checkbox" id="check_symbol"> <label for="check_symbol">
+                                            Символы
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checkbox" id="check_lowerCase"> <label for="check_lowerCase">
+                                            Строчные
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checkbox" id="check_upperCase"> <label for="check_upperCase">
+                                            Заглавные
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -95,19 +96,18 @@
                             </li>
                             <li>
                                 
-                                3. Убедитесь, что ваши пароли имеют длину не менее 12 символов и содержат буквы, цифры и специальные символы. Некоторые люди предпочитают генерировать пароли длиной 14 или 20 символов.
+                                3. Убедитесь, что ваши пароли имеют длину не менее 12 символов и содержат буквы, цифры и специальные символы. Некоторые люди предпочитают генерировать пароли длиной 16 или 25 символов.
                             </li>
                             <li>
+                                4. Меняйте свои пароли, когда у вас есть на то основания, например, после того, как вы поделились ими с кем-то, после взлома веб-сайта или если прошло больше года с тех пор, как вы в последний раз меняли его.
                                 
-                                4. Избегайте слабых, часто используемых паролей, таких как asd123, password1 или Temp!. Некоторые примеры надежного пароля включают в себя: S&2x4S12nLS1*, JANa@sx3l2&s$, 49915w5$oYmH.
                             </li>
                             <li>
                                 
                                 5. Избегайте использования похожих паролей, которые меняют только одно слово или символ. Эта практика ослабляет безопасность вашей учетной записи на нескольких сайтах.
                             </li>
                             <li>
-                                
-                                6. Меняйте свои пароли, когда у вас есть на то основания, например, после того, как вы поделились ими с кем-то, после взлома веб-сайта или если прошло больше года с тех пор, как вы в последний раз меняли его.
+                                6. Избегайте слабых, часто используемых паролей, таких как asd123, password1 или qwerty. Некоторые примеры надежного пароля включают в себя: S&rFqX1IPtB#%9, 8owGdIF33@$3, mX5FIVN*9HA5.
                             </li>
                         </ul>
                         </div>
@@ -120,5 +120,6 @@
         </script>
         </body>
         </html>
+        
         
         
