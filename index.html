@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Генератор паролей</title>
   </head>
   <body>
@@ -23,13 +25,16 @@
            
             
             <div class="action__block">
-                <input id="" class="input__action-block" type="text"></input>
-                <a href="" class="action_copy-btn">
-                    <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M32 2H8C5.79 2 4 3.79 4 6v28h4V6h24V2zm6 8H16c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4V14c0-2.21-1.79-4-4-4zm0 32H16V14h22v28z"/></svg>
-                </a>
-                <a class="action__refresh-btn">
-                    <svg width="40" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z"/></g></svg>
-                </a>
+                <input class="input__action-block" type="text">
+                <div class="svgBackground">
+                    <a href="" class="action_copy-btn">
+                        <svg height="32" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M32 2H8C5.79 2 4 3.79 4 6v28h4V6h24V2zm6 8H16c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4V14c0-2.21-1.79-4-4-4zm0 32H16V14h22v28z"/></svg>
+                    </a>
+                    <a href="" class="action__refresh-btn">
+                        <svg  height="42px" viewBox="0 0 24 24" width="42px" fill="#686a69"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z"/></svg>
+                    </a>
+                </input>
+                </div>
             </div>
             
             <div class="app__wrapper">
@@ -40,8 +45,8 @@
                         <div class="length__settings">
                             <span>Длина пароля</span>
                             <div class="input__range-settings">
-                                <input id="number" class="number__input" type="number" step="1" value="8" maxlength="2" max="48" min="4" size="3" oninput="range.value=number.value"> 
-                                <input id="range" name="number" class="range__input" type="range" value="8" min="4" max="48" oninput="number.value=range.value">
+                                <input id="number" class="number__input" type="number" step="1" value="4" maxlength="48" max="48" min="4" size="3" oninput="range.value=number.value"> 
+                                <input id="range" name="number" class="range__input" type="range" value="4" min="4" max="48" oninput="number.value=range.value">
                             </div>
                         </div>
                         <div class="bonus__settings">
@@ -50,22 +55,26 @@
 
                                 <ul class="list__settings">
                                     <li> 
-                                        <input type="checkbox" class="checkbox" id="check_number"> <label for="check_number">
+                                        <input type="checkbox" class="checkbox" id="check_number" checked> 
+                                        <label for="check_number">
                                             Числа
                                         </label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" class="checkbox" id="check_symbol"> <label for="check_symbol">
+                                        <input type="checkbox" class="checkbox" id="check_symbol" checked> 
+                                        <label for="check_symbol">
                                             Символы
                                         </label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" class="checkbox" id="check_lowerCase"> <label for="check_lowerCase">
+                                        <input type="checkbox" class="checkbox" id="check_lowerCase" checked> 
+                                        <label for="check_lowerCase">
                                             Строчные
                                         </label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" class="checkbox" id="check_upperCase"> <label for="check_upperCase">
+                                        <input type="checkbox" class="checkbox" id="check_upperCase" checked> 
+                                        <label for="check_upperCase">
                                             Заглавные
                                         </label>
                                     </li>
@@ -77,7 +86,7 @@
             </div>
         </div>
             <div class="copy__btn">
-                <button>Копировать</button>
+                <button class="copyBtn">Копировать</button>
             </div>
             <section class="fullscreen">
                 <div class="about__block">
@@ -121,5 +130,5 @@
         </body>
         </html>
         
-        
+
         
