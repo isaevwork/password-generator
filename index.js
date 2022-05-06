@@ -1,4 +1,5 @@
 const input = document.querySelector(".input__action-block");
+const clipBoard = document.querySelector(".action_copy-btn");
 const refreshBtn = document.querySelector(".action__refresh-btn");
 const copyBtn = document.querySelector(".copyBtn");
 const lengthInput = document.getElementById("number");
@@ -80,11 +81,87 @@ copyBtn.onclick = () => {
       filterAddString += data.letters.upper;
     }
     input.value = generatePassword(filterAddString, lengthInput.value);
+    navigator.clipboard.writeText(input.value);
   } else {
     alert("Введите значение в интервале от 4 до 48 символов");
   }
 };
 
-dom.lowerCaseFilter.onclick = function (event) {
-  console.log(dom.lowerCaseFilter.checked);
+// Функция копирования пароля в буфер обмена
+clipBoard.onclick = (e) => {
+  e.preventDefault();
+  navigator.clipboard.writeText(input.value);
+};
+
+dom.numberFilter.onclick = () => {
+  let filterAddString = "";
+  if (lengthInput.value >= 4 && lengthInput.value <= 48) {
+    if (dom.numberFilter.checked) {
+      filterAddString += data.number;
+    }
+    if (dom.symbolFilter.checked) {
+      filterAddString += data.symbol;
+    }
+    if (dom.lowerCaseFilter.checked) {
+      filterAddString += data.letters.lower;
+    }
+    if (dom.upperCaseFilter.checked) {
+      filterAddString += data.letters.upper;
+    }
+    input.value = generatePassword(filterAddString, lengthInput.value);
+  }
+};
+dom.symbolFilter.onclick = () => {
+  let filterAddString = "";
+  if (lengthInput.value >= 4 && lengthInput.value <= 48) {
+    if (dom.numberFilter.checked) {
+      filterAddString += data.number;
+    }
+    if (dom.symbolFilter.checked) {
+      filterAddString += data.symbol;
+    }
+    if (dom.lowerCaseFilter.checked) {
+      filterAddString += data.letters.lower;
+    }
+    if (dom.upperCaseFilter.checked) {
+      filterAddString += data.letters.upper;
+    }
+    input.value = generatePassword(filterAddString, lengthInput.value);
+  }
+};
+dom.lowerCaseFilter.onclick = () => {
+  let filterAddString = "";
+  if (lengthInput.value >= 4 && lengthInput.value <= 48) {
+    if (dom.numberFilter.checked) {
+      filterAddString += data.number;
+    }
+    if (dom.symbolFilter.checked) {
+      filterAddString += data.symbol;
+    }
+    if (dom.lowerCaseFilter.checked) {
+      filterAddString += data.letters.lower;
+    }
+    if (dom.upperCaseFilter.checked) {
+      filterAddString += data.letters.upper;
+    }
+    input.value = generatePassword(filterAddString, lengthInput.value);
+  }
+};
+dom.upperCaseFilter.onclick = () => {
+  let filterAddString = "";
+  if (lengthInput.value >= 4 && lengthInput.value <= 48) {
+    if (dom.numberFilter.checked) {
+      filterAddString += data.number;
+    }
+    if (dom.symbolFilter.checked) {
+      filterAddString += data.symbol;
+    }
+    if (dom.lowerCaseFilter.checked) {
+      filterAddString += data.letters.lower;
+    }
+    if (dom.upperCaseFilter.checked) {
+      filterAddString += data.letters.upper;
+    }
+    input.value = generatePassword(filterAddString, lengthInput.value);
+  }
 };

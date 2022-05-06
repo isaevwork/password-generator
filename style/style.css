@@ -77,6 +77,16 @@ justify-content: center;
     align-content:center;
     transform-origin:center;
 }
+.action_copy-btn svg {
+    opacity: 0.65;
+}
+.action_copy-btn svg:hover {
+    opacity: 1;
+}
+.action_copy-btn svg:active {
+    width: 46px;
+    height: 30px;
+}
 
 .action__refresh-btn svg{
     position: absolute;
@@ -84,6 +94,10 @@ justify-content: center;
     left: 665px;
     cursor: pointer;
     fill: rgb(104, 106, 105);
+    opacity: 0.6;
+}
+.action__refresh-btn svg:hover {
+    opacity: 1;
 }
 .action__refresh-btn:active svg{
     animation: rotation .15s ease alternate;
@@ -92,12 +106,12 @@ justify-content: center;
     0%
     {
         transform: rotate(0deg);
-        fill: rgb(255, 255, 255);        
+        fill: rgb(255, 255, 255);    
     }
     100%
     {
-        transform: rotate(-259deg);
-        fill: rgb(104, 106, 105);
+        transform: rotate(-190deg);
+        fill: rgb(104, 106, 105);      
     }
 }
 
