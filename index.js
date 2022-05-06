@@ -1,4 +1,5 @@
 const input = document.querySelector(".input__action-block");
+const rangeInput = document.querySelector(".range__input");
 const clipBoard = document.querySelector(".action_copy-btn");
 const refreshBtn = document.querySelector(".action__refresh-btn");
 const copyBtn = document.querySelector(".copyBtn");
@@ -41,6 +42,7 @@ function generatePassword(obj, passLength) {
 lengthInput.oninput = function () {
   this.value = this.value.substr(0, 2);
 };
+
 // Генерируем пароль заданнной длины по клику кнопки
 refreshBtn.onclick = (e) => {
   e.preventDefault();
@@ -93,6 +95,25 @@ clipBoard.onclick = (e) => {
   navigator.clipboard.writeText(input.value);
 };
 
+// Генерация пароля при смене состояний чекбокса или range input
+rangeInput.onclick = () => {
+  let filterAddString = "";
+  if (lengthInput.value >= 4 && lengthInput.value <= 48) {
+    if (dom.numberFilter.checked) {
+      filterAddString += data.number;
+    }
+    if (dom.symbolFilter.checked) {
+      filterAddString += data.symbol;
+    }
+    if (dom.lowerCaseFilter.checked) {
+      filterAddString += data.letters.lower;
+    }
+    if (dom.upperCaseFilter.checked) {
+      filterAddString += data.letters.upper;
+    }
+    input.value = generatePassword(filterAddString, lengthInput.value);
+  }
+};
 dom.numberFilter.onclick = () => {
   let filterAddString = "";
   if (lengthInput.value >= 4 && lengthInput.value <= 48) {
